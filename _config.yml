@@ -1,16 +1,3 @@
-plugins:
-  - jekyll-relative-links
-relative_links:
-  enabled: true
-  collections: true
-include:
-  - CONTRIBUTING.md
-  - README.md
-  - LICENSE.md
-  - COPYING.md
-  - CODE_OF_CONDUCT.md
-  - CONTRIBUTING.md
-  - ISSUE_TEMPLATE.md
-  - PULL_REQUEST_TEMPLATE.md
-title: jackylee's 408-notebook
-theme: jekyll-theme-cayman
+theme: jekyll-theme-minimal
+title: Jackylee's homepage
+description: Bookmark this to keep an eye on my project updates!

@@ -1,0 +1,2 @@
+pip install --index https://pypi.mirrors.ustc.edu.cn/simple/ [package]
+pip install --upgrade [package]

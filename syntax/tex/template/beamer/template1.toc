@@ -1,0 +1,6 @@
+\beamer@sectionintoc {1}{概述}{2}{0}{1}
+\beamer@subsectionintoc {1}{1}{基本理论}{2}{0}{1}
+\beamer@sectionintoc {2}{研究方法}{3}{0}{2}
+\beamer@subsectionintoc {2}{1}{主要论点和论据}{4}{0}{2}
+\beamer@sectionintoc {3}{总结}{5}{0}{3}
+\beamer@subsectionintoc {3}{1}{研究意义与创新点}{5}{0}{3}

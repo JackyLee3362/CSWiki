@@ -11,12 +11,12 @@
       - 退出区
       - 剩余区
 
-```cpp
+```c
 do{
-entry section; // 进入区
-critical section; // 临界区
-exit section; // 退出区
-remainder section; // 剩余区
+  entry section; // 进入区
+  critical section; // 临界区
+  exit section; // 退出区
+  remainder section; // 剩余区
 } while(true)
 ```
 
@@ -49,18 +49,18 @@ remainder section; // 剩余区
 
 ```cpp
 wait(S){
-while(S <= 0);
-S--;0
+  while(S <= 0);
+  S--;0
 }
 
 signal(S){
-S++;
+  S++;
 }
 ```
 
 - 记录型信号量
 
-```cpp
+```c
 typedef struct{
 int value;
 struct process *L;
@@ -70,7 +70,7 @@ struct process *L;
 - 相应的 wait(S) 和 signal(S)的操作如下
 - wait(S)
 
-```cpp
+```c
 void wait(semaphore S){ // 相当于申请资源
 S.value--;
 if(S.value < 0){
@@ -82,7 +82,7 @@ block(S.L);
 
 - signal(S)
 
-```cpp
+```c
 void signal(semaphore S){ // 相当于释放资源
 S.value++;
 if(S.value <= 0){
@@ -94,7 +94,7 @@ wakeup(P);
 
 - 利用信号量实现同步
 
-```cpp
+```c
 semaphore S = 0; // 初始化信号量
 P1(){
 x;		// x语句
@@ -102,7 +102,7 @@ V(S);   // 告诉进程2，语句x已经完成
 }
 P2(){
 P(S);   // 检查语句x是否运行完成
-y;		// 检查无误，运行y语句
+y;  // 检查无误，运行y语句
 }
 ```
 

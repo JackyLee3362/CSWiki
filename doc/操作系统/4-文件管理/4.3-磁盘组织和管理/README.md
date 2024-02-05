@@ -21,10 +21,10 @@
   - $$T_r=\frac{1}{2r}$$
   - 典型的旋转速度为 5400 转/分，相当于一周 11.1ms，则 Tr 为 5.55ms；对于软盘，其旋转速度为 300-600 转/分，则 Tr=50-100ms
 - 传输时间
-  - $$T_t=\frac{b}{rN}$$
+  - $T_t=\frac{b}{rN}$
   - r 为磁盘每秒的转数，N 为一个磁道上的字节数
 - 总平均存取时间
-  - $$T_a=T_s+\frac{1}{2r}+\frac{b}{rN}$$
+  - $T_a=T_s+\frac{1}{2r}+\frac{b}{rN}$
 - 常用的磁盘调度算法
   - 先来先服务（First Come First Serve, FCFS）算法
   - 最短寻找时间优先（Shortest Seek Time First, SSTF）算法

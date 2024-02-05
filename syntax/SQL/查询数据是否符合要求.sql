@@ -1,1 +1,0 @@
-SELECT * FROM table_name WHERE LEN(index_name) == 10

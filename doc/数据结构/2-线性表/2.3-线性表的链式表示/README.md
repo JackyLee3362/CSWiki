@@ -1,7 +1,6 @@
+# 2.3 线性表的链式表示
 
-## 2.3 线性表的链式表示
-
-### 单链表的定义
+## 单链表的定义
 
 - 线性表的链式存储又称单链表
 
@@ -41,7 +40,7 @@ void CreateList_Head(LinkList &L,int n){
 
 ```cpp
 void CreateList_Tail(LinkList& L, int n) {
-  L = new LNode; 
+  L = new LNode;
   L->next = NULL;
   LNode* r;
   LNode* p;
@@ -70,7 +69,7 @@ Status GetElem_L(LinkList L,int i, ElemType &e){
     j++;
   }
   e = p->data;
-  return OK;	
+  return OK;
 }
 ```
 
@@ -93,7 +92,7 @@ int LocateElem_L_return_num(LinkList L,ElemType e){
 
 - 插入结点操作
 
-  - 时间复杂度$O(n)$  ，开销主要在查找第i-1个元素
+  - 时间复杂度$O(n)$ ，开销主要在查找第 i-1 个元素
 
 ```cpp
 Status ListInsert_L(LinkList& L, int i, ElemType e) {
@@ -137,9 +136,9 @@ bool ListDelete_L(LinkList& L, int i, ElemType &e) {
 
 - 求表长操作
 
-### 双链表
+## 双链表
 
-  - 结点类型定义
+- 结点类型定义
 
 ```cpp
 typedef struct DuLNode{
@@ -148,9 +147,9 @@ typedef struct DuLNode{
 }DuLNode, *DuLinkList;
 ```
 
-  - 双链表的插入操作
+- 双链表的插入操作
 
-    - 时间复杂度$O(n)$
+  - 时间复杂度$O(n)$
 
 ```cpp
 int ListInsert_DuL(DuLinkList &L, int i, ElemType e) {
@@ -169,9 +168,9 @@ int ListInsert_DuL(DuLinkList &L, int i, ElemType e) {
 }// ListInsert_DuL
 ```
 
-  - 双链表的删除操作
+- 双链表的删除操作
 
-    - 时间复杂度$O(n)$
+  - 时间复杂度$O(n)$
 
 ```cpp
 int ListDelete_DuL(DuLinkList& L, int i, ElemType &e) {
@@ -214,14 +213,14 @@ typydef struct{
     - 基于运算的考虑
     - 基于环境的考虑
 
-### 习题
+## 习题
 
-  - 7 给定有n个元素的一维数组，建立一个有序单链表的最低时间复杂度是?→$$O(n\log_2n)$$  先建立再排序，时间复杂度是$O(n^2)$； 先排序再建立，排序的时间复杂度是$O(n\log_2n)$，建立的时间复杂度是$O(n)$
-  - 15【2016】
-  - 21 一个链表最常用的操作是在最后一个元素之后插入一个元素和删除第一个元素，选用？最节省时间 A 不带头结点的单循环链表 B 双链表 C 不带头结点且有尾指针的单循环链表 D 单链表→C
-  - 23【2016】
-  - 25 某线性表用带头结点的循环单链表存储，头指针为head，当head->next->next=head 成立时，线性表长度可能是？→0或者1
-  - 综合题21【2009】已知一个嗲有表头结点的单链表，结点结构为data|link 假设该链表只给出了头指针list。在不改变链表的前提下，请设计一个尽可能高效的算法，查找链表中倒数第k个位置上的结点（k为正整数）。若查找成功，算法输出该结点的data域的值，并返回1；否则，只返回0。要求： ① 描述算法的基本设计思想 ② 描述算法的详细实现步骤 ③ 根据设计思想和实现步骤，采用程序设计语言描述算法，关键之处请给出简要注释
-  - 22【2012】
-  - 23【2015】
-  - 25【2019】
+- 7 给定有 n 个元素的一维数组，建立一个有序单链表的最低时间复杂度是?→$$O(n\log_2n)$$ 先建立再排序，时间复杂度是$O(n^2)$； 先排序再建立，排序的时间复杂度是$O(n\log_2n)$，建立的时间复杂度是$O(n)$
+- 15【2016】
+- 21 一个链表最常用的操作是在最后一个元素之后插入一个元素和删除第一个元素，选用？最节省时间 A 不带头结点的单循环链表 B 双链表 C 不带头结点且有尾指针的单循环链表 D 单链表 →C
+- 23【2016】
+- 25 某线性表用带头结点的循环单链表存储，头指针为 head，当 head->next->next=head 成立时，线性表长度可能是？→0 或者 1
+- 综合题 21【2009】已知一个嗲有表头结点的单链表，结点结构为 data|link 假设该链表只给出了头指针 list。在不改变链表的前提下，请设计一个尽可能高效的算法，查找链表中倒数第 k 个位置上的结点（k 为正整数）。若查找成功，算法输出该结点的 data 域的值，并返回 1；否则，只返回 0。要求： A. 描述算法的基本设计思想 B. 描述算法的详细实现步骤 C. 根据设计思想和实现步骤，采用程序设计语言描述算法，关键之处请给出简要注释
+- 22【2012】
+- 23【2015】
+- 25【2019】

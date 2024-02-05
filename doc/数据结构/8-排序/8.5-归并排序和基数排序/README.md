@@ -1,10 +1,10 @@
-## 8.5 归并排序和基数排序
+# 8.5 归并排序和基数排序
 
-### 归并排序 Merge Sort
+## 归并排序 Merge Sort
 
 代码 TODO
 
-### 基数排序 Radix Sort
+## 基数排序 Radix Sort
 
 代码 TODO
 

@@ -1,10 +1,10 @@
-## 8.3 交换排序
+# 8.3 交换排序
 
-### 冒泡排序 Bubble Sort
+## 冒泡排序 Bubble Sort
 
 代码 TODO
 
-### 快速排序 Quick Sort
+## 快速排序 Quick Sort
 
 代码 TODO
 

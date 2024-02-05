@@ -1,12 +1,12 @@
-## 6.4 图的应用
+# 6.4 图的应用
 
-### 最小生成树 Minimum-Spanning-Tree, MST
+## 最小生成树 Minimum-Spanning-Tree, MST
 
 - 伪代码
 - Prim 算法
 - Kruskal 算法
 
-### 最短路径 Short Path First, SPF
+## 最短路径 Short Path First, SPF
 
 - Dijkstra 算法——求单源最短路径问题
   - 迪杰斯特拉 Dijkstra
@@ -15,16 +15,16 @@
 - ~OSPF 算法
 - ~SPFA 算法 Shortest Path Faster Algorithm
 
-### 有向无环图描述表达式
+## 有向无环图描述表达式
 
 - 有向无环图 Direct Acyclic Graph
 
-### 拓扑排序
+## 拓扑排序
 
 - AOV 网：Activity On Vertex Network
 - AOE 网：Activity On Edge Network
 
-### 关键路径
+## 关键路径
 
 - 事件 v_k 的最早发生时间 ve(k)
 - 事件 v_k 的最迟发生时间 vl(k)
@@ -33,15 +33,15 @@
 - 一个活动 a_i 的最迟开始时间 l(i)和其最早开始时间 e(i)的差额 d(i)=l(i)-e(i)
 <!--
 
-### 习题
+## 习题
 
 - 1【2010】
 - 4
 - 5【2012】下列关于最小生成树的叙述中，正确的是
-  ① 最小生成树的代价唯一
-  ② 所有权值最小的边一定会出现在所有的最小生成树中
-  ③ 使用 Prim 算法从不同定点开始得到的最小生成树一定相同
-  ④ 使用 Prim 算法和 Kruskal 算法得到的最小生成树总不相同 →①
+  A. 最小生成树的代价唯一
+  B. 所有权值最小的边一定会出现在所有的最小生成树中
+  C. 使用 Prim 算法从不同定点开始得到的最小生成树一定相同
+  D. 使用 Prim 算法和 Kruskal 算法得到的最小生成树总不相同 →A.
 - 6
 - 8【2012】
 - 9【2016】

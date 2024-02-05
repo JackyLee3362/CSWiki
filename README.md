@@ -7,3 +7,5 @@
 [操作系统](operating-system/SUMMARY.md)
 
 [计算机网络](computer-networking/SUMMARY.md)
+
+[Wiki](wiki/SUMMARY.md)

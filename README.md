@@ -1,11 +1,11 @@
 # 计算机 408 课程笔记
 
-[数据结构](data-structure/SUMMARY.md)
+[数据结构](数据结构/README.md)
 
-[计算机组成原理](computer-organization/SUMMARY.md)
+[计算机组成原理](计算机组成原理/README.md)
 
-[操作系统](operating-system/SUMMARY.md)
+[操作系统](操作系统/README.md)
 
-[计算机网络](computer-networking/SUMMARY.md)
+[计算机网络](计算机网络/README.md)
 
-[Wiki](wiki/SUMMARY.md)
+[Wiki](wiki/README.md)

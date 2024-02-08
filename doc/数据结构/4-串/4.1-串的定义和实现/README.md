@@ -58,4 +58,5 @@ typedef struct{
   - Repalce(&S, T, V)：串替换
   - StrInsert(&S, pos, T)：子串插入
   - StrDelete(&S, pos, len)：子串删除
-  - DestoryString(&S)：串销毁 -->
+  - DestoryString(&S)：串销毁 
+  -->

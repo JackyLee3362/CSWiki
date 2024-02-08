@@ -72,31 +72,55 @@ def generate_readme_from_dict(tree:dict, depth:int=0) -> str:
             content.insert(0, template.format(key, value))
     return "\n\n".join(content)
 
-def run_with_path(path):
-    path_obj = Path(path)
-    prefix = f"./{path_obj.name}/"
-    tree = generate_dir_structure(path_obj, prefix)
+def run_with_single_path(path:Path) -> None:
+    """对单个路径进行README写入
+
+    Args:
+        path (Path): 需要写READEM.md的路径
+    """
+    prefix = f"./{path.name}/"
+    tree = generate_dir_structure(path, prefix)
     # console.print(tree)
     content = generate_readme_from_dict(tree)
     # console.print(content)
-    readme_path = path_obj.joinpath('README.md')
+    readme_path = path.joinpath('README.md')
     with open(readme_path, 'w', encoding='utf-8') as f:
         f.write(content)
     console.print("文件输出到",readme_path)
     
+def dir_only_contain_files(path:Path) -> bool:
+    """判断一个文件夹是否只含有文件
+
+    Args:
+        path (Path): 文件夹路径
+
+    Returns:
+        bool: True表示是 False 表示不是
+    """
+    
+    for entry in path.iterdir():
+        if entry.is_dir():
+            return False
+    return True
+
+def run_recursive(path_str:str):
+    path = Path(path_str)
+    run_with_single_path(path)
+    for entry in path.iterdir():
+        if entry.is_dir():
+            if dir_only_contain_files(entry):
+                continue
+            else:
+                run_with_single_path(entry)
+                run_recursive(entry)
+    
 
 if __name__ == '__main__':
     # 如果有其他文件目录需要生成，可以注册到这里
-    src = [
-        "./doc",
-        "./doc/操作系统",
-        "./doc/计算机网络",
-        "./doc/计算机组成原理",
-        "./doc/数据结构"
-    ]
-    for path in src:
-        run_with_path(path)
-    shutil.move("./doc/README.md", "./README.md")
+    src = "./doc"
+    
+    run_recursive(src)
+    # shutil.move(src + '/README.md', "./README.md")
     
 
     

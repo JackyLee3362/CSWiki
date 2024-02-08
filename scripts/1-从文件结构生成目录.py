@@ -117,7 +117,7 @@ def run_recursive(path_str:str):
 
 if __name__ == '__main__':
     # 如果有其他文件目录需要生成，可以注册到这里
-    src = "./doc"
+    src = "./docs"
     
     run_recursive(src)
     # shutil.move(src + '/README.md', "./README.md")

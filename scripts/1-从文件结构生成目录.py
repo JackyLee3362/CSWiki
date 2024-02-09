@@ -3,7 +3,7 @@ from rich.console import Console
 import shutil
 
 console = Console()
-README_MD = 'readme.md'
+README_MD = 'README.md'
 
 def check_path_valid(path: Path):
     """判断一个路径是否存在
@@ -23,7 +23,7 @@ def is_readme_file(path:Path) -> bool:
     Returns:
         bool: True表示是Readme False表示不是
     """
-    if path.is_file() and path.name.lower() in README_MD:
+    if path.is_file() and path.name == README_MD:
         return True
     return False
     
@@ -78,7 +78,7 @@ def run_with_single_path(path:Path) -> None:
     Args:
         path (Path): 需要写READEM.md的路径
     """
-    prefix = f"./{path.name}/"
+    prefix = "./"
     tree = generate_dir_structure(path, prefix)
     # console.print(tree)
     content = generate_readme_from_dict(tree)
@@ -103,8 +103,8 @@ def dir_only_contain_files(path:Path) -> bool:
             return False
     return True
 
-def run_recursive(path_str:str):
-    path = Path(path_str)
+def run_recursive(path:Path):
+    # path = Path(path_str)
     run_with_single_path(path)
     for entry in path.iterdir():
         if entry.is_dir():
@@ -117,7 +117,7 @@ def run_recursive(path_str:str):
 
 if __name__ == '__main__':
     # 如果有其他文件目录需要生成，可以注册到这里
-    src = "./docs"
+    src = Path("./docs")
     
     run_recursive(src)
     # shutil.move(src + '/README.md', "./README.md")

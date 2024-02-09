@@ -53,21 +53,26 @@ def generate_dir_structure(path:Path, prefix:str) -> dict:
 
 
 
-def generate_readme_from_dict(tree:dict, depth:int=0) -> str:
+def generate_readme_from_dict(tree:dict, depth:int=0, limit=2) -> str:
     """从目录树结构生成对应的readme.py
 
     Args:
         tree (dict): 目录树字典结构
         depth (int, optional): 树的深度. Defaults to 0.
+        limit (int, optional): 表示最深的目录结构, Defaults to 2
 
     Returns:
         str: 返回要生成的md字符串
     """
     content = []
+    if depth > limit:
+        return
     template =(depth+1)*"#" + " " + "[{}]({})"
     for key, value in tree.items():
         if isinstance(value, dict):
-            content.append(generate_readme_from_dict(value, depth+1))
+            ret = generate_readme_from_dict(value, depth+1)
+            if ret:
+                content.append(ret)
         else:
             content.insert(0, template.format(key, value))
     return "\n\n".join(content)
@@ -116,11 +121,8 @@ def run_recursive(path:Path):
     
 
 if __name__ == '__main__':
-    # 如果有其他文件目录需要生成，可以注册到这里
     src = Path("./docs")
-    
     run_recursive(src)
-    # shutil.move(src + '/README.md', "./README.md")
     
 
     
